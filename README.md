@@ -10,7 +10,7 @@
 Usage example:
 
 ```java
-final LinearLayoutManager layoutManager = new org.solovyev.android.views.llm.LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+final WrapLinearLayoutManager layoutManager = new WrapLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
 recyclerView.setLayoutManager(layoutManager);
 recyclerView.addItemDecoration(new DividerItemDecoration(this, null));
