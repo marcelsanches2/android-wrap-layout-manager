@@ -36,7 +36,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 
-import org.solovyev.android.views.llm.LinearLayoutManager;
+import android.support.v7.widget.WrapLinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -102,7 +102,7 @@ public class DialogListFragment extends DialogFragment {
 
 	private void initRecyclerView() {
 		RecyclerView.LayoutManager layoutManager =
-				new LinearLayoutManager(recyclerView, LinearLayoutManager.VERTICAL, false);
+				new WrapLinearLayoutManager(recyclerView, WrapLinearLayoutManager.VERTICAL, false);
 		recyclerView.setLayoutManager(layoutManager);
 		adapter = new DialogListAdapter(this, listItems);
 		recyclerView.setAdapter(adapter);

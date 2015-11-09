@@ -1,2 +1,2 @@
-include ':lib'
+include ':android-wrap-layout-manager'
 include ':app'

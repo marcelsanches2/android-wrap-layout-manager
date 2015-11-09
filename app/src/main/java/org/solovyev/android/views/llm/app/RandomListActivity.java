@@ -33,8 +33,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import org.solovyev.android.views.llm.DividerItemDecoration;
-import org.solovyev.android.views.llm.LinearLayoutManager;
+import android.support.v7.widget.WrapLinearLayoutManager;
+import android.support.v7.widget.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +67,7 @@ public class RandomListActivity extends FragmentActivity {
 		});
 
 		final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-		final LinearLayoutManager layoutManager = new LinearLayoutManager(recyclerView, LinearLayoutManager.VERTICAL, false);
+		final WrapLinearLayoutManager layoutManager = new WrapLinearLayoutManager(recyclerView, WrapLinearLayoutManager.VERTICAL, false);
 		layoutManager.setOverScrollMode(ViewCompat.OVER_SCROLL_IF_CONTENT_SCROLLS);
 		recyclerView.setLayoutManager(layoutManager);
 		recyclerView.addItemDecoration(new DividerItemDecoration(this, null));
@@ -79,12 +79,12 @@ public class RandomListActivity extends FragmentActivity {
 			public void onClick(View v) {
 				final ViewGroup.LayoutParams lp = recyclerView.getLayoutParams();
 				final int orientation = layoutManager.getOrientation();
-				if (orientation == LinearLayoutManager.VERTICAL) {
-					layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+				if (orientation == WrapLinearLayoutManager.VERTICAL) {
+					layoutManager.setOrientation(WrapLinearLayoutManager.HORIZONTAL);
 					lp.width = ViewGroup.LayoutParams.WRAP_CONTENT;
 					lp.height = ViewGroup.LayoutParams.MATCH_PARENT;
 				} else {
-					layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+					layoutManager.setOrientation(WrapLinearLayoutManager.VERTICAL);
 					lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
 					lp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
 				}

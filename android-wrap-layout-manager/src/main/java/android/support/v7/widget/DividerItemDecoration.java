@@ -21,7 +21,7 @@
  * Site:  http://se.solovyev.org
  */
 
-package org.solovyev.android.views.llm;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

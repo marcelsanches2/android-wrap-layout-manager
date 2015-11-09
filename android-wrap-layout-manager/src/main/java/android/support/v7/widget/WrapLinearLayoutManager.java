@@ -21,7 +21,7 @@
  * Site:  http://se.solovyev.org
  */
 
-package org.solovyev.android.views.llm;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 
 import java.lang.reflect.Field;
+import org.solovyev.android.views.llm.BuildConfig;
 
 /**
  * {@link android.support.v7.widget.LinearLayoutManager} which wraps its content. Note that this class will always
@@ -42,7 +43,7 @@ import java.lang.reflect.Field;
  * If animations are not used at all then a normal measuring procedure will run and child views will be measured during
  * the measure pass.
  */
-public class LinearLayoutManager extends android.support.v7.widget.LinearLayoutManager {
+public class WrapLinearLayoutManager extends LinearLayoutManager {
 
 	private static boolean canMakeInsetsDirty = true;
 	private static Field insetsDirtyField = null;
@@ -60,26 +61,26 @@ public class LinearLayoutManager extends android.support.v7.widget.LinearLayoutM
 	private final Rect tmpRect = new Rect();
 
 	@SuppressWarnings("UnusedDeclaration")
-	public LinearLayoutManager(Context context) {
+	public WrapLinearLayoutManager(Context context) {
 		super(context);
 		this.view = null;
 	}
 
 	@SuppressWarnings("UnusedDeclaration")
-	public LinearLayoutManager(Context context, int orientation, boolean reverseLayout) {
+	public WrapLinearLayoutManager(Context context, int orientation, boolean reverseLayout) {
 		super(context, orientation, reverseLayout);
 		this.view = null;
 	}
 
 	@SuppressWarnings("UnusedDeclaration")
-	public LinearLayoutManager(RecyclerView view) {
+	public WrapLinearLayoutManager(RecyclerView view) {
 		super(view.getContext());
 		this.view = view;
 		this.overScrollMode = ViewCompat.getOverScrollMode(view);
 	}
 
 	@SuppressWarnings("UnusedDeclaration")
-	public LinearLayoutManager(RecyclerView view, int orientation, boolean reverseLayout) {
+	public WrapLinearLayoutManager(RecyclerView view, int orientation, boolean reverseLayout) {
 		super(view.getContext(), orientation, reverseLayout);
 		this.view = view;
 		this.overScrollMode = ViewCompat.getOverScrollMode(view);
