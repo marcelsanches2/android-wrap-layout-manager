@@ -1,8 +1,9 @@
-# Linear Layout Manager
+# Wrap LayoutManager
 
 ## Description
 
-Implementation of [LinearLayoutManager](https://developer.android.com/reference/android/support/v7/widget/LinearLayoutManager.html) which wraps its contents.
+* Implementation of [LinearLayoutManager](https://developer.android.com/reference/android/support/v7/widget/LinearLayoutManager.html) which wraps its contents.
+* Implementation of [GridLayoutManager](https://developer.android.com/reference/android/support/v7/widget/GridLayoutManager.html) which wraps its contents.
 
 Usage example:
 
