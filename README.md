@@ -1,5 +1,7 @@
 # Wrap LayoutManager
 
+![](art/android-wrap-layout-manager.png)
+
 ## Description
 
 * Implementation of [LinearLayoutManager](https://developer.android.com/reference/android/support/v7/widget/LinearLayoutManager.html) which wraps its contents.
