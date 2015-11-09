@@ -55,6 +55,10 @@ dependencies {
 * https://github.com/serso/android-linear-layout-manager
 * https://gist.github.com/c0nnector/5f80e19d9ba6d562fbd5
 
+## Reference
+
+* http://coolerfall.com/android/recyclerview-gridlayout-wrap_content/
+
 ## License
 
 Library is distributed under Apache 2.0 license, see LICENSE.txt
